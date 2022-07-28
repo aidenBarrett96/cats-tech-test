@@ -42,7 +42,9 @@ const HomePage: NextPage = () => {
         <VStack id="favourites" flex={1} justify="center">
           <Heading>Favourite Cats</Heading>
           <Text>View and manage your favourite cat images here!</Text>
-          {!likedCats.length && <Text>You haven't liked any cats yet!</Text>}
+          {!likedCats.length && (
+            <Text>You {`haven't`} liked any cats yet!</Text>
+          )}
           {likedCats.length && (
             <CatImageList cats={likedCats} isFavouriteList />
           )}
